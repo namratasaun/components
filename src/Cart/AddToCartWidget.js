@@ -7,10 +7,10 @@ const AddToCartWidget = ({ productId, variant }) => {
   // const [quantity, setQuantity] = useState(0);
   const cart = useSelector((state) => state.cart);
 
-  useEffect(() => {
-    console.log('wow');
-    console.log(cart);
-  }, [cart]);
+  // useEffect(() => {
+  //   console.log('wow');
+  //   console.log(cart);
+  // }, [cart]);
 
   const incrementHandler = (qty) => {
     dispatch({
@@ -45,10 +45,10 @@ const AddToCartWidget = ({ productId, variant }) => {
           {/* <p>{cart}</p> */}
         </Fragment>
       ) : (
-        <div>
-          <button onClick={() => incrementHandler(1)}>+</button>
-          <div>{getCartQuantity()}</div>
+        <div style={{ display: 'flex' }}>
           <button onClick={() => decrementHandler(1)}>-</button>
+          <div style={{ margin: '10px' }}>{getCartQuantity()}</div>
+          <button onClick={() => incrementHandler(1)}>+</button>
         </div>
       )}
     </div>

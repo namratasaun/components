@@ -31,6 +31,7 @@ const RecComments = ({ data }) => {
       {innerData.map((val, index) => (
         <div style={{ marginLeft: `1rem` }}>
           <Comment
+            key={val.comment_id}
             data={{ user: val.user, comment: val.comment, likes: val.likes }}
             likeHandler={() => ok(index)}
             replyHandler={(data) => replyHandler(index, data)}
