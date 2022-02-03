@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import Comment from './Comment';
 
 const RecComments = ({ data }) => {
@@ -19,12 +19,6 @@ const RecComments = ({ data }) => {
     }
     setInnerData([...q]);
   };
-
-  //   useEffect(() => {
-  //     // console.log(depth.current++);
-
-  //     setInnerData(data);
-  //   }, [data]);
 
   return (
     <div>

@@ -1,4 +1,4 @@
-import { Fragment, useEffect } from 'react';
+import { Fragment } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { objectComparison } from '../utils/generalDataStructureManipulation';
 
@@ -6,11 +6,6 @@ const AddToCartWidget = ({ productId, variant }) => {
   const dispatch = useDispatch();
   // const [quantity, setQuantity] = useState(0);
   const cart = useSelector((state) => state.cart);
-
-  // useEffect(() => {
-  //   console.log('wow');
-  //   console.log(cart);
-  // }, [cart]);
 
   const incrementHandler = (qty) => {
     dispatch({
