@@ -10,7 +10,7 @@ const Listing = () => {
 
   useEffect(() => {
     setProductData(data.find((val) => val.product_id === +params.productId));
-  }, []);
+  }, [params.productId]);
 
   const selectVariantHandler = (variant, option) => {
     setSelectedVariant((prevState) => ({ ...prevState, [variant]: option }));
