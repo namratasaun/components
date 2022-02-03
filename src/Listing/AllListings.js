@@ -35,8 +35,6 @@ export const data = [
       },
     ],
   },
-  // { product_id: 3, product_name: 'Green tshirt' },
-  // { product_id: 4, product_name: 'Yellow tshirt' },
 ];
 
 const AllListings = () => {
